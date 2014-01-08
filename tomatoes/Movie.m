@@ -16,7 +16,7 @@
         self.title = [dictionary objectForKey:@"title"];
         self.synopsis = [dictionary objectForKey:@"synopsis"];
         self.rating = [dictionary objectForKey:@"mpaa_rating"];
-        self.year = [NSString stringWithFormat:@"%d", [dictionary objectForKey:@"year"]];
+        self.year = [NSString stringWithFormat:@"%d", [[dictionary objectForKey:@"year"] intValue]];
         
         NSDictionary *posters = [dictionary objectForKey:@"posters"];
         
