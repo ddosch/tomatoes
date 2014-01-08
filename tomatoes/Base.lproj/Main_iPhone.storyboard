@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="WDm-ce-1kZ">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <scenes>
+        <!--Movie List View Controller - Box Office-->
+        <scene sceneID="Mlp-k4-5Rb">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RN5-2l-Hio" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewController id="pdA-U6-XHj" customClass="MovieListViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="104" sectionHeaderHeight="22" sectionFooterHeight="22" id="DYQ-qK-MwY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MovieCell" rowHeight="104" id="DwS-uM-sUe" customClass="MovieCell">
+                                <rect key="frame" x="0.0" y="86" width="320" height="104"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DwS-uM-sUe" id="Ktf-dW-fXI">
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="103"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="White House Down" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f0J-sJ-NeM">
+                                            <rect key="frame" x="68" y="11" width="173" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="232" translatesAutoresizingMaskIntoConstraints="NO" id="1zE-V1-wC9">
+                                            <rect key="frame" x="68" y="34" width="232" height="64"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <string key="text">The White House is under siege in this action thriller from Independence Day director Roland Emmerich and The Amazing Spider-Man's writer James Vanderbilt in this Sony Pictures release. Channing Tatum stars. ~ Jeremy Wheeler, Rovi</string>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Vq-tM-TzM">
+                                            <rect key="frame" x="5" y="11" width="60" height="87"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="R" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WOS-SK-DiP">
+                                            <rect key="frame" x="257" y="11" width="54" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="italicSystem" pointSize="16"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outlet property="ratingLabel" destination="WOS-SK-DiP" id="0A6-9q-aeQ"/>
+                                    <outlet property="synopsisLabel" destination="1zE-V1-wC9" id="KhO-ac-Rna"/>
+                                    <outlet property="thumbnailView" destination="5Vq-tM-TzM" id="qsg-9J-BU5"/>
+                                    <outlet property="titleLabel" destination="f0J-sJ-NeM" id="c8V-9q-gV8"/>
+                                    <segue destination="i7m-vH-uwC" kind="push" id="i7f-ad-XAY"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Box Office" id="f3I-kS-YCc"/>
+                    <connections>
+                        <segue destination="i7m-vH-uwC" kind="push" id="3ub-mw-lck"/>
+                    </connections>
+                </tableViewController>
+            </objects>
+            <point key="canvasLocation" x="183" y="313"/>
+        </scene>
+        <!--Movie View Controller-->
+        <scene sceneID="9YS-y7-fyj">
+            <objects>
+                <viewController id="i7m-vH-uwC" customClass="MovieViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="exQ-9k-Mgi"/>
+                        <viewControllerLayoutGuide type="bottom" id="KsA-IC-ZTS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vdC-hd-olo">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="White House Down" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N57-XX-9ag">
+                                <rect key="frame" x="20" y="101" width="280" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2013" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YjG-Dg-o7S">
+                                <rect key="frame" x="20" y="130" width="145" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="R" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ugx-yu-rsA">
+                                <rect key="frame" x="173" y="130" width="127" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w59-cp-sya">
+                                <rect key="frame" x="20" y="284" width="280" height="264"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3DZ-N7-EEx">
+                                <rect key="frame" x="20" y="159" width="280" height="117"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="50" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="269" translatesAutoresizingMaskIntoConstraints="NO" id="gj6-Bd-zBg">
+                                        <rect key="frame" x="5" y="0.0" width="269" height="117"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <mutableString key="text">His heroic antics having inspired a citywide wave of masked vigilantes, Kick-Ass (Aaron Taylor-Johnson) joins their ranks to help clean up the streets, only to face a formidable challenge when the vengeful Red Mist (Christopher Mintz-Plasse) transforms himself into the world's first super villain in this sequel written and directed by Jeff Wadlow (Never Back Down). Dave/Kick-Ass and Mindy/Hit Girl (Chloe Grace Moretz) are about to graduate high school and become a crime-fighting duo when their noble plans are foiled by Mindy's strict parents. Now, as Mindy hangs up her Hit Girl uniform and navigates the treacherous high-school social scene, Kick-Ass begins patrolling the streets with Justice Forever, a fearless group of urban watchdogs fronted by former mob thug Colonel Stars and Stripes (Jim Carrey). They've got the criminal element on the run when Chris D'Amico lays his Red Mist persona to rest, and reemerges as The Mother F**ker, a powerful criminal mastermind with a loyal legion of henchmen. The Mother F**ker is determined to avenge the death of his late father, who previously perished at the hands of Kick-Ass and Hit Girl. Now, as The Mother F**ker and his minions begin targeting the members of Justice Forever, Hit Girl realizes that the only way to save Kick-Ass and his new friends is to emerge from her forced retirement, and fight back with everything she's got. John Leguizamo, Donald Faison, Morris Chestnut, and Robert Emms co-star. ~ Jason Buchanan, Rovi</mutableString>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="hst-zQ-FFa"/>
+                    <connections>
+                        <outlet property="imageView" destination="w59-cp-sya" id="fuv-fV-bPJ"/>
+                        <outlet property="ratingLabel" destination="ugx-yu-rsA" id="pP5-Ii-9RI"/>
+                        <outlet property="synopsisLabel" destination="gj6-Bd-zBg" id="3wq-Pl-Geb"/>
+                        <outlet property="titleLabel" destination="N57-XX-9ag" id="Mch-hF-5BR"/>
+                        <outlet property="yearLabel" destination="YjG-Dg-o7S" id="Lb5-ED-xIA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VIm-KH-9xB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="741" y="235"/>
+        </scene>
+        <!--Box Office-->
+        <scene sceneID="fqS-Ea-ily">
+            <objects>
+                <navigationController title="Box Office" definesPresentationContext="YES" id="WDm-ce-1kZ" userLabel="Box Office" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="z7o-FL-Ht9">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <attributedString key="userComments">
+                        <fragment content="Box Office">
+                            <attributes>
+                                <font key="NSFont" metaFont="toolTip"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
+                    <connections>
+                        <segue destination="pdA-U6-XHj" kind="relationship" relationship="rootViewController" id="CQs-9W-bJA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="69i-sC-AeM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-351" y="313"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="i7f-ad-XAY"/>
+    </inferredMetricsTieBreakers>
+</document>
