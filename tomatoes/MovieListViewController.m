@@ -10,6 +10,7 @@
 #import "MovieViewController.h"
 #import "MovieCell.h"
 #import "Movie.h"
+#import "UIImageView+AFNetworking.h"
 
 @interface MovieListViewController ()
 
@@ -82,11 +83,10 @@
     MovieCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     Movie *movie = [[Movie alloc] initWithDictionary:[self.movies objectAtIndex:indexPath.row]];
-    cell.titleLabel.text = movie.title;
+    cell.movieTitleLabel.text = movie.title;
     cell.synopsisLabel.text = movie.synopsis;
     cell.ratingLabel.text = movie.rating;
-    cell.thumbnailView.image = movie.thumbnail;
-    
+    [cell.thumbnailView setImageWithURL:movie.thumbnail];
     return cell;
 }
 

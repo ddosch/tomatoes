@@ -20,16 +20,11 @@
         
         NSDictionary *posters = [dictionary objectForKey:@"posters"];
         
-        NSURL *thumbnailUrl = [NSURL URLWithString:[posters objectForKey:@"thumbnail"]];
-        NSData *thumbData = [NSData dataWithContentsOfURL:thumbnailUrl];
-        self.thumbnail = [[UIImage alloc] initWithData:thumbData];
-        
-        NSURL *origUrl = [NSURL URLWithString:[posters objectForKey:@"original"]];
-        NSData *origData = [NSData dataWithContentsOfURL:origUrl];
-        self.original = [[UIImage alloc] initWithData:origData];
-        
+        self.thumbnail = [NSURL URLWithString:[posters objectForKey:@"thumbnail"]];
+        self.original = [NSURL URLWithString:[posters objectForKey:@"original"]];
     }
     return self;
 }
+
 
 @end

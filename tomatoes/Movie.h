@@ -14,8 +14,8 @@
 @property (nonatomic, strong) NSString *synopsis;
 @property (nonatomic, strong) NSString *rating;
 @property (nonatomic, strong) NSString *year;
-@property (nonatomic, strong) UIImage *thumbnail;
-@property (nonatomic, strong) UIImage *original;
+@property (nonatomic, strong) NSURL *thumbnail;
+@property (nonatomic, strong) NSURL *original;
 
 - (id)initWithDictionary:(NSDictionary *)dictionary;
 

@@ -8,13 +8,15 @@
 
 #import "MovieViewController.h"
 #import "Movie.h"
+#import "UIImageView+AFNetworking.h"
 
 @interface MovieViewController ()
-@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *movieTitleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *yearLabel;
 @property (weak, nonatomic) IBOutlet UILabel *ratingLabel;
 @property (weak, nonatomic) IBOutlet UILabel *synopsisLabel;
-@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UIImageView *movieImageView;
 
 @end
 
@@ -53,11 +55,11 @@
 }
 
 - (void)updateValues {
-    self.titleLabel.text = self.movie.title;
+    self.movieTitleLabel.text = self.movie.title;
     self.yearLabel.text = self.movie.year;
     self.ratingLabel.text = self.movie.rating;
     self.synopsisLabel.text = self.movie.synopsis;
-    self.imageView.image = self.movie.original;
+    [self.movieImageView setImageWithURL:self.movie.original];
 }
 
 @end
